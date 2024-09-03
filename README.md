@@ -28,8 +28,10 @@ The objective of the `COMANDO_USER_WINDOWS.bat` script is to configure a standar
 
 - **Step 1:** Navigate to the folder where the `COMANDO_USER_WINDOWS.bat` file is located. If you have not moved it, the default path is `C:\URS-KIOSK\CREATION_OF_USER\COMANDO_USER_WINDOWS.bat`.
 - **Step 2:** Right-click on the `COMANDO_USER_WINDOWS.bat` file and select "Run as administrator." This is crucial for the script to make all the necessary changes to the system.
+  
   ![image](https://github.com/user-attachments/assets/b08323f7-c4ef-4445-b969-803438da3c60)
 - **Step 3:** The script will start executing automatically. You will see messages in the console indicating the progress of each operation.
+  
   ![image](https://github.com/user-attachments/assets/5080341e-2022-452b-a12b-4172ec8860e7)
 
 
@@ -47,6 +49,7 @@ The objective of the `COMANDO_USER_WINDOWS.bat` script is to configure a standar
 ### 4.1 Initial Configuration
 
 When you first log in with the `ursposuser` user, the `ConfigLoginAplicationURS` application will check for previous configurations. If no saved configurations are found, a window will be presented to configure an initial option.
+
 ![image](https://github.com/user-attachments/assets/98dc2702-7697-4bab-bb5b-a0f0bf1fb86a)
 
 
@@ -57,6 +60,7 @@ When you first log in with the `ursposuser` user, the `ConfigLoginAplicationURS`
    - Enter the URL you want to open in kiosk mode.
    - Press Start, and the application will launch Microsoft Edge in kiosk mode and hide the taskbar.
    - The session will automatically close once the browser is closed.
+     
      ![image](https://github.com/user-attachments/assets/88d317d3-2bd9-4c0d-8122-eb9692049f99)
 
 
@@ -65,10 +69,12 @@ When you first log in with the `ursposuser` user, the `ConfigLoginAplicationURS`
    - Browse and select the executable file of the program you want to run.
    - Press Start, and the program will launch, and the taskbar will be hidden.
    - The session will automatically close once the program finishes.
+     
      ![image](https://github.com/user-attachments/assets/c0a56bf4-d811-4240-aa71-53826ce80be0)
 
 3. **Orientation Selection:**
    -  After selecting the Web Page mode or Desktop Program mode, another window will appear where you can choose the screen orientation (horizontal or vertical). This choice will be made only once.
+     
      ![image](https://github.com/user-attachments/assets/e1dc22a7-2ab0-4379-9d89-6be3e7b6baa2)
 
 
@@ -80,6 +86,7 @@ When you first log in with the `ursposuser` user, the `ConfigLoginAplicationURS`
 
 - If you wish to change the configuration after it has been saved, you can delete the stored values in the application settings. This can be done by deleting the folder located at the following path: `C:\Users\ursposuser\AppData\Local\ConfigLoginAplicationURS`.
 - **Note:** The specific folder to delete will have a name like `ConfigLoginAplicationURS_Path`, followed by other characters that may vary. This operation must be performed from the administrator user where the script was initially run. Deleting this folder will reset the user's configuration based on the application.
+  
   ![image](https://github.com/user-attachments/assets/22ebe6cb-51d9-48f5-95d8-f43634106cf4)
 
 
