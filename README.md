@@ -20,6 +20,9 @@ The objective of the `COMANDO_USER_WINDOWS.bat` script is to configure a standar
   - `urs.jpg` or `urs.png`: Images to be used as the desktop background.
   - `ConfigLoginAplicationURS.exe`: Configuration application that will run at login.
 - **Default Script Location:** The `COMANDO_USER_WINDOWS.bat` file is located by default at the following path: `C:\URS-KIOSK\CREATION_OF_USER\COMANDO_USER_WINDOWS.bat`.
+  
+![image](https://github.com/user-attachments/assets/241a28d2-c22a-4c9c-a34d-9ad4591a55e9)
+
 
 ### 2. Script Execution
 
