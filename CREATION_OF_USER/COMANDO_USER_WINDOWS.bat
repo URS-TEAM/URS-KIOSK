@@ -24,17 +24,17 @@ REM It's important to modify DefaultUserName and DefaultPassword to the standard
 IF %ERRORLEVEL% EQU 0 (
     echo User already configured for automatic login. No action will be taken.
 ) ELSE (
-    regedit /s "C:\ConfigLoginAplicationURS\CREATION_OF_USER\REGEDIT\autologin.reg"
+    regedit /s "C:\URS-KIOSK\CREATION_OF_USER\REGEDIT\autologin.reg"
 )
 
 REM Create a scheduled task to run the BAT script at login for the user ursposuser
-schtasks /create /tn "ApplyTaskbarSettings" /tr "C:\ConfigLoginAplicationURS\CREATION_OF_USER\FUNCTIONS\ApplyTaskbarSettings.bat" /sc onlogon /ru %username% /rl highest
+schtasks /create /tn "ApplyTaskbarSettings" /tr "C:\URS-KIOSK\CREATION_OF_USER\FUNCTIONS\ApplyTaskbarSettings.bat" /sc onlogon /ru %username% /rl highest
 
 REM Create a scheduled task to run the BAT script at login for the user ursposuser
-schtasks /create /tn "ChangeBackground" /tr "C:\ConfigLoginAplicationURS\CREATION_OF_USER\FUNCTIONS\IMG\ChangeBackground.bat" /sc onlogon /ru %username% /rl highest
+schtasks /create /tn "ChangeBackground" /tr "C:\URS-KIOSK\CREATION_OF_USER\FUNCTIONS\IMG\ChangeBackground.bat" /sc onlogon /ru %username% /rl highest
 
 REM Create the scheduled task to run ConfigLoginAplicationURS.exe at login for the user ursposuser
-schtasks /create /tn "RunConfigLoginAppForUser" /tr "C:\ConfigLoginAplicationURS\APLICATION\ConfigLoginAplicationURS.exe" /sc onlogon /ru %username% /rl highest
+schtasks /create /tn "RunConfigLoginAppForUser" /tr "C:\URS-KIOSK\APLICATION\ConfigLoginAplicationURS.exe" /sc onlogon /ru %username% /rl highest
 
 echo Scheduled task created successfully for %username%.
 

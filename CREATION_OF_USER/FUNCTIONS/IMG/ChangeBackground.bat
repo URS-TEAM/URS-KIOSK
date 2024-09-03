@@ -1,7 +1,7 @@
 @echo off
 REM Define the full path of the wallpaper images (JPG and PNG formats)
-set wallpaper_jpg=C:\ConfigLoginAplicationURS\CREATION_OF_USER\FUNCTIONS\IMG\urs.jpg
-set wallpaper_png=C:\ConfigLoginAplicationURS\CREATION_OF_USER\FUNCTIONS\IMG\urs.png
+set wallpaper_jpg=C:\URS-KIOSK\CREATION_OF_USER\FUNCTIONS\IMG\urs.jpg
+set wallpaper_png=C:\URS-KIOSK\CREATION_OF_USER\FUNCTIONS\IMG\urs.png
 
 REM Check if the JPG file exists
 if exist "%wallpaper_jpg%" (
