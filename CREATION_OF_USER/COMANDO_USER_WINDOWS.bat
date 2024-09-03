@@ -30,8 +30,11 @@ IF %ERRORLEVEL% EQU 0 (
 REM Create a scheduled task to run the BAT script at login for the user ursposuser
 schtasks /create /tn "ApplyTaskbarSettings" /tr "C:\ConfigLoginAplicationURS\CREATION_OF_USER\FUNCTIONS\ApplyTaskbarSettings.bat" /sc onlogon /ru %username% /rl highest
 
+REM Create a scheduled task to run the BAT script at login for the user ursposuser
+schtasks /create /tn "ChangeBackground" /tr "C:\ConfigLoginAplicationURS\CREATION_OF_USER\FUNCTIONS\IMG\ChangeBackground.bat" /sc onlogon /ru %username% /rl highest
+
 REM Create the scheduled task to run ConfigLoginAplicationURS.exe at login for the user ursposuser
-schtasks /create /tn "RunConfigLoginAppForUser" /tr "C:\ConfigLoginAplicationURS\APLICATION\ConfigLoginAplicationURS.exe" /sc onlogon /ru ursposuser /rl highest
+schtasks /create /tn "RunConfigLoginAppForUser" /tr "C:\ConfigLoginAplicationURS\APLICATION\ConfigLoginAplicationURS.exe" /sc onlogon /ru %username% /rl highest
 
 echo Scheduled task created successfully for %username%.
 
