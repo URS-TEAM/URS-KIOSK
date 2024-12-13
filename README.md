@@ -13,6 +13,8 @@ The objective of the `COMANDO_USER_WINDOWS.bat` script is to configure a standar
 ### 1. Preparation
 
 - **Prerequisites:** Ensure that the operating system is Windows and that you have administrator access to run the script.
+- **Download .NET Version:** Depending on your system architecture, download the appropriate version of .NET from the following link:  
+  <a href="https://versionsof.net/core/8.0/8.0.11/" target="_blank">Download .NET 8.0.11</a>
 - **Required Files:** The `COMANDO_USER_WINDOWS.bat` file must be located in a folder with the following files and directories:
   - `autologin.reg`: Registry file that configures automatic login.
   - `ApplyTaskbarSettings.bat`: Script that adjusts the taskbar settings.
