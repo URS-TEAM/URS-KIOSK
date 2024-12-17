@@ -51,7 +51,11 @@ REG ADD "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v "R
 
 REM Permitir únicamente la ejecución de Kbd.exe y archivos con la extensión .kbd
 REG ADD "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer\RestrictRun" /v "1" /t REG_SZ /d "Kbd.exe" /f
+REG ADD "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer\RestrictRun" /v "3" /t REG_SZ /d "KbdTest.exe" /f
+REG ADD "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer\RestrictRun" /v "4" /t REG_SZ /d "KBDesign.exe" /f
+REG ADD "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer\RestrictRun" /v "5" /t REG_SZ /d "KbdCtrl.exe" /f
 REG ADD "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer\RestrictRun" /v "2" /t REG_SZ /d "*.kbd" /f
+REG ADD "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer\RestrictRun" /v "6" /t REG_SZ /d "ClientDataRelay.exe" /f
 
 REM Bloquear el acceso al administrador de tareas
 REG ADD "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\System" /v "DisableTaskMgr" /t REG_DWORD /d "1" /f
