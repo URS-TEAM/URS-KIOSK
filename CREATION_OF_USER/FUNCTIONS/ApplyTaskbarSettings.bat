@@ -42,12 +42,12 @@ REG ADD "HKCU\Software\Classes\.msi" /v "" /t REG_SZ /d "" /f
 
 REM Bloquear la instalación pero permitir la ejecución de otros .exe
 REM Bloquear archivos de instalación comunes .exe desde el registro
-REG ADD "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer\DisallowRun" /v "1" /t REG_SZ /d "setup.exe" /f
-REG ADD "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer\DisallowRun" /v "2" /t REG_SZ /d "installer.exe" /f
+REM REG ADD "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer\DisallowRun" /v "1" /t REG_SZ /d "setup.exe" /f
+REM REG ADD "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer\DisallowRun" /v "2" /t REG_SZ /d "installer.exe" /f
 
 REM Bloquear la ejecución de archivos .msi
-REG ADD "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v "NoRun" /t REG_DWORD /d "1" /f
-REG ADD "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v "RestrictRun" /t REG_DWORD /d "1" /f
+REM REG ADD "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v "NoRun" /t REG_DWORD /d "1" /f
+REM REG ADD "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v "RestrictRun" /t REG_DWORD /d "1" /f
 
 REM Permitir únicamente la ejecución de Kbd.exe y archivos con la extensión .kbd
 REG ADD "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer\RestrictRun" /v "1" /t REG_SZ /d "Kbd.exe" /f
@@ -56,9 +56,11 @@ REG ADD "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer\Restri
 REG ADD "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer\RestrictRun" /v "5" /t REG_SZ /d "KbdCtrl.exe" /f
 REG ADD "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer\RestrictRun" /v "2" /t REG_SZ /d "*.kbd" /f
 REG ADD "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer\RestrictRun" /v "6" /t REG_SZ /d "ClientDataRelay.exe" /f
+REG ADD "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer\RestrictRun" /v "7" /t REG_SZ /d "launcher.exe" /f
+REG ADD "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer\RestrictRun" /v "8" /t REG_SZ /d "taskmgr.exe" /f
 
-REM Bloquear el acceso al administrador de tareas
-REG ADD "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\System" /v "DisableTaskMgr" /t REG_DWORD /d "1" /f
+REM Bloquear el acceso al administrador de tareas 1 = Desactivado y 0 es = activado el administrador
+REM REG ADD "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\System" /v "DisableTaskMgr" /t REG_DWORD /d "0" /f
 
 REM echo Restricciones aplicadas correctamente.
 
